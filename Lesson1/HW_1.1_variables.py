@@ -2,7 +2,7 @@ name = input('Введите ваше имя: ')
 print(f'Приветствуем, {name}')
 
 temperature = float(input('Какова температура вашего тела? '))
-if 36.0 <= temperature <= 36.9:
+if 36.0 <= temperature <= 36.8:
     print(f'Температура {temperature} в норме')
 else:
     print(f'Темепратура {temperature} не соответствует норме! Следует обратится к врачу.')
