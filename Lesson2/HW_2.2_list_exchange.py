@@ -1,14 +1,7 @@
-line = input('Введите элементы списка через пробел: ')
-user_list = line.split()
-print('Исходный список', user_list)
-new_list = []
+line = input('Введите элементы списка через пробел: ').split()
+print('Исходный список', line)
 
-for i in range(1, len(user_list), 2):
-    a, b = user_list[(i-1)], user_list[i]
-    a, b = b, a
-    new_list.append(a)
-    new_list.append(b)
-if len(user_list) % 2 != 0:
-    new_list.append(user_list[-1])
+for i in range(1, len(line), 2):
+    line[i], line[i-1] = line[i-1], line[i]
 
-print('Новый список   ', new_list)
+print('Новый список   ', line)
