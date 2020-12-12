@@ -11,17 +11,17 @@ user_word = input('Введите слова латинскими буквами
 
 
 def int_func1(arg1):
-    line = ''
-    for i in range(len(user_word1)):
-        word = list(arg1[i])
-        letter = word[0].upper()
-        word[0] = letter
-        line += ''.join(word) + " "
-    print('Первый способ:', line)
+    word = list(arg1)
+    letter = word[0].upper()
+    word[0] = letter
+    return ''.join(word)
 
 
 user_word1 = user_word.split()
-int_func1(user_word1)
+user_line1 = ''
+for i in range(len(user_word1)):
+    user_line1 += (int_func1(user_word1[i]) + " ")
+print('Первый способ:', user_line1)
 
 # Второй способ
 
@@ -36,10 +36,12 @@ print('Второй способ:', int_func(user_word))
 
 
 def int_func3(arg3):
-    for i in range(len(user_word3)):
-        arg3[i] = arg3[i].capitalize()
+    arg3 = arg3.capitalize()
     return arg3
 
 
 user_word3 = user_word.split()
-print("Третий способ:", ' '.join(int_func3(user_word3)))
+user_line3 = ''
+for i in range(len(user_word3)):
+    user_line3 += (int_func3(user_word3[i]) + " ")
+print('Третий способ:', user_line3)

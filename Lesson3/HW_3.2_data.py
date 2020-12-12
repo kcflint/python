@@ -14,20 +14,20 @@ user_phone = input('Введите свой номер телефона:')
 # Первый способ
 
 
-def data(name, surname, year, city, email, phone):
+def data1(name1, surname1, year1, city1, email1, phone1):
     print('Первый способ')
-    print(f'имя - {name}; фамилия - {surname}; год рождения - {year}; город проживания - {city};'
-          f'email - {email}; номер телефона - {phone}')
+    print(f'имя - {name1}; фамилия - {surname1}; год рождения - {year1}; город проживания - {city1};'
+          f'email - {email1}; номер телефона - {phone1}')
 
 
-data(name=user_name, surname=user_surname, year=user_year, city=user_city, email=user_email, phone=user_phone)
+data1(name1=user_name, surname1=user_surname, year1=user_year, city1=user_city, email1=user_email, phone1=user_phone)
 
 # Второй способ
 
 
-def data(**kwargs):
-    return kwargs
+def data2(**kwargs):
+    print(kwargs)
 
 
 print('Второй способ')
-print(data(name=user_name, surname=user_surname, year=user_year, city=user_city, email=user_email, phone=user_phone))
+data2(name=user_name, surname=user_surname, year=user_year, city=user_city, email=user_email, phone=user_phone)
